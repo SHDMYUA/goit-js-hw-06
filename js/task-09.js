@@ -6,12 +6,23 @@
 // </div>
 // Для генерации случайного цвета используй функцию getRandomHexColor.
 
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
-
 function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
 }
+
+const refs = {
+  main: document.body,
+  textColor: document.querySelector(".color"),
+  updateColor: document.querySelector(".change-color"),
+}
+
+refs.updateColor.addEventListener("click", changeColor);
+
+function changeColor() {
+  const color = getRandomHexColor();
+  refs.main.style.background = color;
+  refs.textColor.textContent = color;
+}
+
