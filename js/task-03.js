@@ -22,10 +22,10 @@ const images = [
   },
 ];
 
-const imageElplace = document.querySelector(".gallery");
+const imageElplaceRef = document.querySelector(".gallery");
 const imageWidth = "width = 320";
 
-imageElplace.style.display ="flex";
+imageElplaceRef.style.display ="flex";
 
 const makeElementsImg = ({url , alt}) => {
   return images.map(({url, alt}) => {
@@ -37,4 +37,4 @@ const makeElementsImg = ({url , alt}) => {
 
 const imagesELadd = makeElementsImg(images);
 
-imageElplace.insertAdjacentHTML("afterbegin", imagesELadd.join(""));
+imageElplaceRef.insertAdjacentHTML("afterbegin", imagesELadd.join(""));

@@ -22,3 +22,20 @@
 //   border-color: #f44336;
 // }
 
+
+const validationTextRef = document.querySelector("#validation-input");
+
+validationTextRef.addEventListener("blur", checkValidationText);
+
+function checkValidationText (event) {
+  const inputText= event.target;
+  const inputTextLength = Number(inputText.dataset.length);
+
+  if(inputTextLength === inputText.value.length){
+    inputText.classList.add("valid");
+    inputText.classList.remove("invalid");
+    return;
+  }
+  inputText.classList.remove("valid");
+  inputText.classList.add("invalid");
+  };

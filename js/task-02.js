@@ -14,7 +14,7 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-const ingredientElplace = document.querySelector("#ingredients");
+const ingredientElplaceRef = document.querySelector("#ingredients");
 const ingredientElclass = "item";
 
 const makeElementsIngridients = ingredients => {
@@ -29,6 +29,6 @@ const makeElementsIngridients = ingredients => {
 
 const ingredientsELadd = makeElementsIngridients(ingredients);
 
-ingredientElplace.append(...ingredientsELadd);
+ingredientElplaceRef.append(...ingredientsELadd);
 
 

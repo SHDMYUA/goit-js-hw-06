@@ -3,3 +3,12 @@
 // <input id="font-size-control" type="range" min="16" max="96" />
 // <br />
 // <span id="text">Abracadabra!</span>
+
+const sliderRef = document.querySelector("#font-size-control");
+const textRef = document.querySelector("#text");
+
+function updateStyleEl(event) {
+  textRef.style.fontSize = event.target.value + "px";
+}
+
+sliderRef.addEventListener("input", updateStyleEl);

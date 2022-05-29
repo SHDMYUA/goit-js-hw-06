@@ -10,9 +10,17 @@
 // Обновляй интерфейс новым значением переменной counterValue.
 
 
-const decrementButtom = document.querySelector('button[data-action="decrement"]');
-const incrementButtom = document.querySelector('button[data-action="increment"]');
-const span = document.querySelector('#value');
+const decrementButtomRef =
+document.querySelector('button[data-action="decrement"]');
+
+const incrementButtomRef =
+document.querySelector('button[data-action="increment"]');
+
+const spanRef = document.querySelector('#value');
+
+decrementButtomRef.addEventListener("click", decrement);
+
+incrementButtomRef.addEventListener("click", increment);
 
 let counterValue = 0;
 
@@ -27,8 +35,6 @@ function increment () {
 }
 
 function updateCounterValue() {
-  span.textContent = counterValue;
+  spanRef.textContent = counterValue;
 }
 
-decrementButtom.addEventListener("click", decrement);
-incrementButtom.addEventListener("click", increment);
