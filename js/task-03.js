@@ -21,3 +21,20 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const imageElplace = document.querySelector(".gallery");
+const imageWidth = "width = 320";
+
+imageElplace.style.display ="flex";
+
+const makeElementsImg = ({url , alt}) => {
+  return images.map(({url, alt}) => {
+    const listEl = `<li><img src="${url}" alt="${alt}" ${imageWidth}</img></li>`;
+
+    return listEl;
+  });
+};
+
+const imagesELadd = makeElementsImg(images);
+
+imageElplace.insertAdjacentHTML("afterbegin", imagesELadd.join(""));

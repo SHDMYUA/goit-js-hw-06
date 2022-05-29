@@ -20,7 +20,7 @@ const ingredientElclass = "item";
 const makeElementsIngridients = ingredients => {
   return ingredients.map(ingredient => {
     const ingredientEl = document.createElement("li");
-    ingredientEl.textContent = `${ingredient}`;
+    ingredientEl.textContent = ingredient;
     ingredientEl.classList.add(ingredientElclass);
         
     return ingredientEl;

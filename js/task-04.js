@@ -8,3 +8,27 @@
 // Создай переменную counterValue в которой будет храниться текущее значение счетчика и инициализируй её значением 0.
 // Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
 // Обновляй интерфейс новым значением переменной counterValue.
+
+
+const decrementButtom = document.querySelector('button[data-action="decrement"]');
+const incrementButtom = document.querySelector('button[data-action="increment"]');
+const span = document.querySelector('#value');
+
+let counterValue = 0;
+
+function decrement () {
+  counterValue-=1;
+  updateCounterValue();
+}
+
+function increment () {
+  counterValue+=1;
+  updateCounterValue();
+}
+
+function updateCounterValue() {
+  span.textContent = counterValue;
+}
+
+decrementButtom.addEventListener("click", decrement);
+incrementButtom.addEventListener("click", increment);
