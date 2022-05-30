@@ -31,11 +31,22 @@ function checkValidationText (event) {
   const inputText= event.target;
   const inputTextLength = Number(inputText.dataset.length);
 
+  // Variant 1:
   if(inputTextLength === inputText.value.length){
-    inputText.classList.add("valid");
-    inputText.classList.remove("invalid");
-    return;
+    inputText.classList.value ="valid";
+        return;
   }
-  inputText.classList.remove("valid");
-  inputText.classList.add("invalid");
+  inputText.classList.value ="invalid";
   };
+
+// Variant 2:
+  // if(inputTextLength === inputText.value.length){
+  //   return changeClass(inputText, "valid", "invalid");
+  //   }
+  //   return changeClass(inputText, "invalid", "valid");
+  // };
+
+  // function changeClass (element, add, remove){
+  //   element.classList.add(add);
+  //   element.classList.remove(remove);
+  // };
